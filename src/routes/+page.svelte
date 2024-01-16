@@ -1,5 +1,6 @@
 <script>
 	import Counter from './Counter.svelte';
+	import PageList from './PageList.svelte';
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
 </script>
@@ -10,6 +11,9 @@
 </svelte:head>
 
 <section>
+
+	<PageList />
+
 	<h1>
 		<span class="welcome">
 			<picture>

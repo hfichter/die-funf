@@ -15,11 +15,7 @@ export default {
 			precompress: false,
 			strict: true,
 		}),
-		// paths: {
-		// 	base: '/m11-frontend',
-		// }
 	}
-
 };
 
 
