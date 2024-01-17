@@ -7,7 +7,7 @@
 	<h1>About magnetoscope</h1>
 
 	<p>
-		magnetoscope is a simple Svelte app that let users publish their profile pages.
+		magnetoscope is a simple app that let users publish their profile pages.
 	</p>
 
 </div>

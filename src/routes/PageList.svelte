@@ -1,17 +1,29 @@
-<script>
+<script lang="ts">
+	import { PB_URL } from '$lib/config';
+	import PocketBase, { type RecordModel } from 'pocketbase';
+	import { onMount } from 'svelte';
+	const pb = new PocketBase(PB_URL);
+
+	let profiles: RecordModel[] | null = null;
+	async function fetchProfiles() {
+		profiles = await pb.collection('profiles').getFullList({ sort: '-created' });
+	}
+	onMount(() => {
+		fetchProfiles();
+	});
 </script>
 
-<div>
-	<h1>Welcome to magnetoscope.<br />The simple profile pagepublishing app.</h1>
-	<div>
-		<h3>Latest pages from our users:</h3>
+<h1>Profiles:</h1>
+{#if profiles}
+	{#each profiles as profile}
 		<ul>
-			<li>
-				<a href="/pages/1">Bob</a>
-			</li>
-			<li>
-				<a href="/pages/2">Alice</a>
-			</li>
+			{#if profile.public}
+				<li>
+					<a href="/pages/{profile.id}">{profile.id}</a>
+				</li>
+			{/if}
 		</ul>
-	</div>
-</div>
+	{/each}
+{:else}
+	<p>Loading...</p>
+{/if}
