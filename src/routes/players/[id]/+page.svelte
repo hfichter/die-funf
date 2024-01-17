@@ -7,19 +7,19 @@
 	import { onMount } from 'svelte';
 
 	const pb = new PocketBase(PB_URL);
-	let profile: RecordModel | null = null;
+	let player: RecordModel | null = null;
 
-	async function fetchProfile() {
-		profile = await pb.collection('profiles').getOne(data.id);
+	async function fetchPlayer() {
+		player = await pb.collection('players').getOne(data.id);
 	}
 	onMount(() => {
-		fetchProfile();
+		fetchPlayer();
 	});
 </script>
 
-{#if profile && profile.public}
-	<h1>{profile.id}</h1>
-	<p>{profile.description}</p>
+{#if player}
+	<h1>{player.name}</h1>
+	<p>{player.name} est un gentil Funf</p>
 {:else}
-	<p>Loading profile...</p>
+	<p>Chargement du funf...</p>
 {/if}
