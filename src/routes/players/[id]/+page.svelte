@@ -1,16 +1,14 @@
 <script lang="ts">
 	import { PB_URL } from '$lib/config.js';
-	export let data;
-
-	// import type  { RecordModel } from 'pocketbase';
+	import { converter } from '$lib/globals.js';
 	import PocketBase, { type RecordModel } from 'pocketbase';
 	import { onMount } from 'svelte';
+
+	export let data;
 
 	const pb = new PocketBase(PB_URL);
 	let player: RecordModel | null = null;
 
-	import showdown  from 'showdown';
-	let converter = new showdown.Converter();
 
 	async function fetchPlayer() {
 		player = await pb.collection('players').getOne(data.id);
