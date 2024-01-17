@@ -13,15 +13,15 @@
 	});
 </script>
 
-<h1>Les Funf:</h1>
+<h1 class="text-3xl text-orange-500">Les Funf:</h1>
 {#if players}
-	{#each players as player}
-		<ul>
+		<ul class="text-sky-500">
+			{#each players as player}
 			<li>
 				<a href="/players/{player.id}">{player.name}</a>
 			</li>
+			{/each}
 		</ul>
-	{/each}
 {:else}
-	<p>Loading...</p>
+	<p class="text-sky-500">Loading...</p>
 {/if}
