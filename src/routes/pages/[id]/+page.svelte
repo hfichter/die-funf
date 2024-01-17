@@ -17,9 +17,11 @@
 	});
 </script>
 
-{#if profile && profile.public}
-	<h1>{profile.id}</h1>
-	<p>{profile.description}</p>
-{:else}
-	<p>Loading profile...</p>
-{/if}
+<div class="text-column">
+	{#if profile && profile.public}
+		<h1>{profile.id}</h1>
+		<p>{profile.description}</p>
+	{:else}
+		<p>Loading profile...</p>
+	{/if}
+</div>

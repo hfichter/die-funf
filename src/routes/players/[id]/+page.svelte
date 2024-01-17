@@ -17,9 +17,11 @@
 	});
 </script>
 
-{#if player}
-	<h1>{player.name}</h1>
-	<p>{player.name} est un gentil Funf</p>
-{:else}
-	<p>Chargement du funf...</p>
-{/if}
+<div class="text-column">
+	{#if player}
+		<h1>{player.name}</h1>
+		<p>{player.name} est un gentil Funf</p>
+	{:else}
+		<p>Chargement du funf...</p>
+	{/if}
+</div>
