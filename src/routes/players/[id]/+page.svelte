@@ -9,6 +9,9 @@
 	const pb = new PocketBase(PB_URL);
 	let player: RecordModel | null = null;
 
+	import showdown  from 'showdown';
+	let converter = new showdown.Converter();
+
 	async function fetchPlayer() {
 		player = await pb.collection('players').getOne(data.id);
 	}
@@ -20,7 +23,7 @@
 <div class="text-column">
 	{#if player}
 		<h1>{player.name}</h1>
-		<p>{player.name} est un gentil Funf</p>
+		<p>{@html converter.makeHtml(player.data.description)}</p>
 	{:else}
 		<p>Chargement du funf...</p>
 	{/if}

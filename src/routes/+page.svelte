@@ -10,7 +10,7 @@
 
 <section>
 	<LesFunf />
-	<PageList />
+	<!-- <PageList /> -->
 </section>
 
 <style>
