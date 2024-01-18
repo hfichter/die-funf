@@ -1,6 +1,7 @@
 <script>
 	import LesFunf from './LesFunf.svelte';
 	import PageList from './PageList.svelte';
+	export let data;
 </script>
 
 <svelte:head>
@@ -9,7 +10,7 @@
 </svelte:head>
 
 <section>
-	<LesFunf />
+	<LesFunf players={data.players} />
 	<!-- <PageList /> -->
 </section>
 
