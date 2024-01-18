@@ -4,9 +4,9 @@
 </svelte:head>
 
 <div class="text-column">
-	<h1>About magnetoscope</h1>
+	<h1 class="text-3xl text-orange-500">About magnetoscope</h1>
 
-	<p>
+	<p class="text-sky-500">
 		magnetoscope is a simple app that let users publish their profile pages.
 	</p>
 
