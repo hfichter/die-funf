@@ -17,6 +17,7 @@
 		"@sveltejs/adapter-static": "^3.0.1",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
+		"@types/dompurify": "^3.0.5",
 		"@types/showdown": "^2.0.6",
 		"autoprefixer": "^10.4.17",
 		"postcss": "^8.4.33",
@@ -31,6 +32,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"dompurify": "^3.0.8",
+		"marked": "^11.1.1",
 		"pocketbase": "^0.20.3",
 		"showdown": "^2.1.0"
 	}
