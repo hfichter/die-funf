@@ -1,6 +1,6 @@
 <script>
 	import LesFunf from './LesFunf.svelte';
-	import PageList from './PageList.svelte';
+	import ProfileList from './ProfileList.svelte';
 	export let data;
 </script>
 
@@ -10,8 +10,9 @@
 </svelte:head>
 
 <section>
+	<ProfileList />
 	<LesFunf players={data.players} />
-	<!-- <PageList /> -->
+
 </section>
 
 <style>

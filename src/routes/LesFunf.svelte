@@ -4,7 +4,7 @@
 	export let players: Player[];
 </script>
 
-<h1 class="text-3xl text-orange-500">Les Funf:</h1>
+<h1 class="text-3xl text-orange-500">Les Funf</h1>
 {#if players}
 		<ul class="text-sky-500">
 			{#each players as player}
