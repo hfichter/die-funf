@@ -20,11 +20,11 @@
 
 <div class="text-column">
 	{#if profile && profile.public}
-		<h1 class="text-3xl text-orange-500">{profile.name}</h1>
-		<p class="text-sky-500">
+		<h1 class="text-3xl mb-3">{profile.name}</h1>
+		<div class="markdown">
 			{@html DOMPurify.sanitize(marked.parse(profile.content || '- no content -') as string)}
-		</p>
+		</div>
 	{:else}
-		<p class="text-sky-500">Loading profile...</p>
+		<p>Loading profile...</p>
 	{/if}
 </div>

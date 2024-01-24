@@ -9,7 +9,6 @@
 	const pb = new PocketBase(PB_URL);
 	let player: RecordModel | null = null;
 
-
 	async function fetchPlayer() {
 		player = await pb.collection('players').getOne(data.id);
 	}
@@ -20,8 +19,8 @@
 
 <div class="text-column">
 	{#if player}
-		<h1 class="text-3xl text-orange-500">{player.name}</h1>
-		<p class="text-slate-500">{@html converter.makeHtml(player.data.description)}</p>
+		<h1 class="text-3xl mb-3">{player.name}</h1>
+		<p>{@html converter.makeHtml(player.data.description)}</p>
 	{:else}
 		<p>Chargement du funf...</p>
 	{/if}

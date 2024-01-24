@@ -17,10 +17,10 @@
 </script>
 
 <div class="mb-4">
-	<h1 class="text-3xl text-orange-500">Profiles</h1>
+	<h1 class="text-3xl mb-3">Profiles</h1>
 	{#if profiles}
 		{#each profiles as profile}
-			<ul class="text-sky-500">
+			<ul>
 				{#if profile.public}
 					<li>
 						<a href="/pages/{profile.id}">{profile.name}</a>
@@ -29,6 +29,6 @@
 			</ul>
 		{/each}
 	{:else}
-		<p class="text-sky-500">Loading...</p>
+	<p>Loading...</p>
 	{/if}
 </div>
