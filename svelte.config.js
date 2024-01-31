@@ -16,7 +16,7 @@ export default {
 			strict: true,
 		}),
 		paths: {
-			base: '/das-funf'
+			base: '/die-funf'
 		}
 	}
 };
