@@ -15,5 +15,8 @@ export default {
 			precompress: false,
 			strict: true,
 		}),
+		paths: {
+			base: '/das-funf'
+		}
 	}
 };
