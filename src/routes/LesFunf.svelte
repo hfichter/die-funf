@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import type { Player } from '$lib/types';
 	export let players: Player[];
 </script>
@@ -9,7 +10,7 @@
 		<ul>
 			{#each players as player}
 				<li>
-					<a href="/players/{player.id}">{player.name}</a>
+					<a href="{base}/players/{player.id}">{player.name}</a>
 				</li>
 			{/each}
 		</ul>

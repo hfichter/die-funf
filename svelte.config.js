@@ -17,11 +17,6 @@ export default {
 		}),
 		paths: {
 			base: '/das-funf'
-		},
-		prerender: {
-			handleHttpError: ({ path, referrer, message }) => {
-				throw new Error(message);
-			}
 		}
 	}
 };
