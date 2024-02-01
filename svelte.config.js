@@ -17,6 +17,9 @@ export default {
 		}),
 		paths: {
 			base: '/die-funf'
+		},
+		prerender: {
+			handleHttpError: 'warn'
 		}
 	}
 };
