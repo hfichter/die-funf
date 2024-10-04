@@ -2,5 +2,14 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended"
-  ]
+  ],
+  "packageRules": [
+    {
+      "groupName": "all dependencies",
+      "matchUpdateTypes": ["major", "minor", "patch"]
+    }
+  ],
+  "prConcurrentLimit": 1,
+  "prHourlyLimit": 1,
+  "rebaseWhen": "behind-base-branch"
 }
