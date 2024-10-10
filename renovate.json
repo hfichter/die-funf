@@ -11,5 +11,8 @@
   ],
   "prConcurrentLimit": 1,
   "prHourlyLimit": 1,
-  "rebaseWhen": "behind-base-branch"
+  "rebaseWhen": "behind-base-branch",
+  "schedule": [
+    "after 12pm on the first day of the month"
+  ]
 }
